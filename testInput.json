@@ -1,0 +1,70 @@
+{
+  "table_01": [
+    {
+      "name": "field_str",
+      "type": "string"
+    },
+    {
+      "name": "field_int",
+      "type": "int"
+    },
+    {
+      "name": "field_bool",
+      "type": "boolean"
+    },
+    {
+      "name": "field_ts",
+      "type": "timestamp"
+    },
+    {
+      "name": "field_varchar",
+      "type": "varchar",
+      "dim": "3"
+    }
+  ],
+  "table_02": [
+    {
+      "name": "field_str",
+      "type": "string"
+    },
+    {
+      "name": "field_int",
+      "type": "int"
+    },
+    {
+      "name": "field_bool",
+      "type": "boolean"
+    },
+    {
+      "name": "field_ts",
+      "type": "timestamp"
+    },
+    {
+      "name": "field_varchar",
+      "type": "varchar",
+      "dim": "3"
+    }
+  ],
+  "rules": {
+    "row_count": {
+      "table_01": 5,
+      "table_02": 10
+    },
+    "field_rules": {
+      "int": {
+        "lower_threshold": "0",
+        "upper_threshold": "2147483647",
+        "initial_value": "5",
+        "repeat_number": "2",
+        "step": "5"
+      },
+      "timestamp": {
+        "start": "2023-08-08T12:15:30",
+        "step_by_minutes": "15"
+      },
+      "string": {
+        "acceptable_values": "dev,ift,psi,prd"
+      }
+    }
+  }
+}
